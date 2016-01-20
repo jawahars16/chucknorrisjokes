@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.chucknorrisjokes.ChuckNorrisApplication;
 import com.chucknorrisjokes.R;
 import com.chucknorrisjokes.di.component.DaggerApplicationComponent;
+import com.chucknorrisjokes.di.component.DaggerMainActivityComponent;
 import com.chucknorrisjokes.di.component.MainActivityComponent;
 import com.chucknorrisjokes.di.module.MainActivityModule;
 import com.chucknorrisjokes.mvp.presenter.MainPresenter;
@@ -24,14 +25,14 @@ public class MainActivity extends BaseActivity implements MainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainPresenter.onCreate();
     }
 
     @Override
     protected void setupDependencies() {
-        ChuckNorrisApplication.
-                    from(this).
-                    getAppComponent().
-                    plus(new MainActivityModule(this)).
-                    inject(this);
+        DaggerMainActivityComponent.builder()
+                .applicationComponent(ChuckNorrisApplication.from(this).getAppComponent())
+                .mainActivityModule(new MainActivityModule(this))
+                .build().inject(this);
     }
 }

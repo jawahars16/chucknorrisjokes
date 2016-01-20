@@ -27,7 +27,7 @@ public class ChuckNorrisApplication extends Application {
     public void initialize(){
         component = DaggerApplicationComponent.
                     builder().
-                    applicationModule(new ApplicationModule()).
+                    applicationModule(new ApplicationModule(this)).
                     build();
     }
 

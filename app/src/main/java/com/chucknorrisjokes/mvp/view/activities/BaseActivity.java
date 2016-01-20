@@ -12,10 +12,10 @@ import com.chucknorrisjokes.di.module.MainActivityModule;
  * Created by Jawahar on 1/20/2016.
  */
 public abstract class BaseActivity extends AppCompatActivity {
-    @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setupDependencies();
     }
 

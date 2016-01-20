@@ -3,6 +3,7 @@ package com.chucknorrisjokes.di.module;
 import com.chucknorrisjokes.mvp.presenter.MainPresenter;
 import com.chucknorrisjokes.mvp.presenter.MainPresenterImpl;
 import com.chucknorrisjokes.mvp.view.MainView;
+import com.chucknorrisjokes.rest.RestService;
 
 import dagger.Module;
 import dagger.Provides;
@@ -25,7 +26,7 @@ public class MainActivityModule {
     }
 
     @Provides
-    public MainPresenter providePresenter(){
-        return new MainPresenterImpl(view);
+    public MainPresenter providePresenter(RestService restService){
+       return new MainPresenterImpl(view, restService);
     }
 }
