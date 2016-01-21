@@ -3,6 +3,7 @@ package com.chucknorrisjokes;
 import android.app.Application;
 import android.content.Context;
 
+import com.activeandroid.ActiveAndroid;
 import com.chucknorrisjokes.di.component.ApplicationComponent;
 import com.chucknorrisjokes.di.component.DaggerApplicationComponent;
 import com.chucknorrisjokes.di.module.ApplicationModule;
@@ -29,6 +30,7 @@ public class ChuckNorrisApplication extends Application {
                     builder().
                     applicationModule(new ApplicationModule(this)).
                     build();
+        ActiveAndroid.initialize(this);
     }
 
     public static ChuckNorrisApplication from(Context context){

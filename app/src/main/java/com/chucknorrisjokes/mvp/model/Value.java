@@ -1,5 +1,7 @@
 package com.chucknorrisjokes.mvp.model;
 
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Table;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

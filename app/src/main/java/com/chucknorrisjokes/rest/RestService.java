@@ -10,6 +10,6 @@ import retrofit.http.GET;
  */
 public interface RestService {
 
-    @GET("/jokes/random")
+    @GET("/jokes/random?escape=javascript")
     Call<Joke> getRandomJoke();
 }

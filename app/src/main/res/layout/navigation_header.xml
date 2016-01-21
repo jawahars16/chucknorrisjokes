@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@color/colorAccent"
+        android:id="@+id/imageView" />
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:id="@+id/image"
+        android:src="#D4D4D4"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#FAFAFA"
+        android:layout_toRightOf="@+id/image"
+        android:layout_alignParentTop="true"
+        android:text="Chuck Norris Jokes"
+        android:textSize="20dp"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:layout_alignBottom="@+id/imageView" />
+</RelativeLayout>

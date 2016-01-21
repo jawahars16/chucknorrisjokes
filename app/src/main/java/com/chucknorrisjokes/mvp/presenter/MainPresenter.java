@@ -7,8 +7,7 @@ import javax.inject.Inject;
 /**
  * Created by Jawahar on 1/20/2016.
  */
-public interface MainPresenter {
-
-
+public interface MainPresenter extends BasePresenter {
+    void favoriteJoke();
     void getRandomJoke();
 }
