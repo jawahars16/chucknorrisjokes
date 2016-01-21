@@ -1,7 +1,6 @@
 # Chuck Norris Jokes
-Android joke to display a random Chuck Norris joke.
+Android app to display random Chuck Norris joke. The app showcases the effective usage of MVP pattern and the following libraries.
 
-Libraries used
 * Dagger 2
 * Butterknife
 * Retrofit 2
