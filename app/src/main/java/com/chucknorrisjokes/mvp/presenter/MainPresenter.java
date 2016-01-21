@@ -10,5 +10,5 @@ import javax.inject.Inject;
 public interface MainPresenter {
 
 
-    void onCreate();
+    void getRandomJoke();
 }

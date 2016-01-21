@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Joke">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="Joke.Accent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
 </resources>
